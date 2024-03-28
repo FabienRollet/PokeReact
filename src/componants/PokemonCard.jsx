@@ -5,7 +5,7 @@ function PokemonCard ({pokemon}) {
 PokemonCard.propTypes = {
      pokemon: PropTypes.shape({
          imgSrc: PropTypes.string,
-         name: PropTypes.string
+         name: PropTypes.string.isRequired,
     }).isRequired
     };
     
@@ -16,6 +16,7 @@ PokemonCard.propTypes = {
             ) : (
                 <img src ="https://media1.tenor.com/m/xLU0RdmhhOMAAAAC/pas-de-panneau-ya-pas-de-panneau.gif"/>
             )}
+            <p>This is {pokemon.name} ♥</p>
         </figure>
     );
 }
