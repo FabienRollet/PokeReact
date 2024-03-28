@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css'
 import PokemonCard from './componants/PokemonCard'
+import NavBar from './componants/NavBar';
 
 function App() {
 const pokemonList = [
