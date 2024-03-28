@@ -10,9 +10,9 @@ PokemonCard.propTypes = {
     };
     
     return(
-        <figure>
+        <figure className="card">
              {pokemon.imgSrc ? (
-                <img src={pokemon.imgSrc} alt={pokemon.name} />
+                <img className="card-img" src={pokemon.imgSrc} alt={pokemon.name} />
             ) : (
                 <img src ="https://media1.tenor.com/m/xLU0RdmhhOMAAAAC/pas-de-panneau-ya-pas-de-panneau.gif"/>
             )}
