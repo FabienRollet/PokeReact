@@ -1,14 +1,16 @@
-
-function NavBar({clickNext, clickBack,pokemonIndex,pokemonList}){
-    return(
+function NavBar({ pokemonList, setPokemonIndex, pokemonIndex }) {
+  return (
     <>
-        {pokemonIndex>0 && <button type="button" onClick={clickBack}>Back</button>}
-        {pokemonIndex < pokemonList.length-1 && <button type="button" onClick={clickNext}>Next</button>}
+      {pokemonList.map((pokebutton, pokemonIndex) => (
+        <button
+          key={pokebutton.name}
+          onClick={() => setPokemonIndex(pokemonIndex)}
+        >
+          {pokebutton.name}
+        </button>
+      ))}
     </>
-    )
-
+  );
 }
 
-export default NavBar
-// {pokemonIndex>0 && <button onClick={()=> setPokemonIndex(pokemonIndex - 1)}>Back</button>}
-// {pokemonIndex < pokemonList.length-1 && <button onClick={()=> setPokemonIndex(pokemonIndex + 1)}>Next</button>}
+export default NavBar;

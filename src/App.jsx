@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import './App.css'
-import PokemonCard from './componants/PokemonCard'
-import NavBar from './componants/NavBar';
+import { useState } from "react";
+import "./App.css";
+import PokemonCard from "./componants/PokemonCard";
+import NavBar from "./componants/NavBar";
 
 function App() {
-const pokemonList = [
-  {
+  const pokemonList = [
+    {
       name: "bulbasaur",
       imgSrc:
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
@@ -30,15 +30,17 @@ const pokemonList = [
     },
   ];
 
-  const [pokemonIndex,setPokemonIndex]= useState(0);
+  const [pokemonIndex, setPokemonIndex] = useState(0);
+
   return (
     <>
-<PokemonCard pokemon ={pokemonList[pokemonIndex]}/>
-<NavBar clickBack={()=> setPokemonIndex(pokemonIndex - 1)}
-        clickNext={()=> setPokemonIndex(pokemonIndex + 1)}
+      <PokemonCard pokemon={pokemonList[pokemonIndex]} />
+      <NavBar
         pokemonIndex={pokemonIndex}
-        pokemonList={pokemonList}/>
+        pokemonList={pokemonList}
+        setPokemonIndex={setPokemonIndex}
+      />
     </>
-  )
+  );
 }
-export default App
+export default App;
