@@ -1,5 +1,6 @@
 
 function NavBar({ pokemonList, setPokemonIndex, pokemonIndex }) {
+    pokemonIndex === 3 && alert("pika");
 
   return (
     <>

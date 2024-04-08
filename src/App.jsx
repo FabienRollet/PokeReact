@@ -40,7 +40,7 @@ function App() {
     hello();
   },[]);
 
-  pokemonIndex === 3 && alert("pika");
+
 
   return (
     <>
