@@ -1,4 +1,6 @@
+
 function NavBar({ pokemonList, setPokemonIndex, pokemonIndex }) {
+
   return (
     <>
       {pokemonList.map((pokebutton, pokemonIndex) => (
